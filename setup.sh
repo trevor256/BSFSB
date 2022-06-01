@@ -37,10 +37,9 @@ aws configure
 gcloud init
 az login
 mkdir terraform
-touch terraform/aws.tf
-touch terraform/az.tf
-touch terraform/gcp.tf
-cd terraform
+curl -L https://raw.githubusercontent.com/trevor256/BSFSB/main/aws.tf -o terraform/aws.tf 
+curl -L https://raw.githubusercontent.com/trevor256/BSFSB/main/az.tf -o terraform/az.tf 
+curl -L https://raw.githubusercontent.com/trevor256/BSFSB/main/gcp.tf -o terraform/gcp.tf 
 terraform init
 #terraform fmt
 #terraform validate
